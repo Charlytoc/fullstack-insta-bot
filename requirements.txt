@@ -6,3 +6,4 @@ supabase
 passlib[bcrypt]
 bcrypt
 argon2-cffi
+python-dotenv
