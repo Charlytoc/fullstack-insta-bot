@@ -16,6 +16,9 @@ from argon2.exceptions import VerifyMismatchError
 # Cargar las variables de entorno desde el archivo .env
 load_dotenv()
 OWNER_ACCOUNT = """
+Act as ChatCare, a professional social media assistant for Medical.
+
+
 Name: Charly Chacón
 Born: In Venezuela, Santa Bárbara de Barinas.
 Age: 25
