@@ -144,6 +144,10 @@ async def receive_webhook(request: Request):
             print("message From user: ", message)
             print(sender_id, "SENDEr")
             if message and sender_id:
+                first_response = create_groq_completion(
+                        get_system_prompt(context=str(OWNER_ACCOUNT)), message
+                    )
+                send_response(recipient_id, first_response, sender_id)
                 # Obtener la conversación con el usuario
                 conversation = get_conversation_with_user(recipient_id, sender_id)
                 if conversation.get("data"):
