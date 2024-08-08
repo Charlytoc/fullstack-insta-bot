@@ -141,6 +141,8 @@ async def receive_webhook(request: Request):
             sender_id = messaging_event.get("sender", {}).get("id", "")
             recipient_id = messaging_event.get("recipient", {}).get("id", "")
 
+            print("message From user: ", message)
+            print(sender_id, "SENDEr")
             if message and sender_id:
                 # Obtener la conversación con el usuario
                 conversation = get_conversation_with_user(recipient_id, sender_id)
@@ -171,6 +173,10 @@ async def receive_webhook(request: Request):
     return {"status": "success"}
 
 def send_response(user_id: str, message: str, recipient_id: str):
+    print("------------------")
+    print("Trying to send response to user")
+    print("Bot Message: ", message)
+    print("------------------")
     url = f"https://graph.instagram.com/{user_id}/messages"
     data = {
         "message": {"text": message+"\n - MESSAGE DE CHARLYBOT"},
