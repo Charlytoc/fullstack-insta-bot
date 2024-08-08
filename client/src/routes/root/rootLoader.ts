@@ -4,7 +4,7 @@ export async function rootLoader({
     // @ts-ignore
   request,
 }): Promise<any> {
-  document.title = "Loading...";
+//   document.title = "Loading...";
   let url = request.url;
   // const userLanguage = navigator.language;
 //   const localStorage = useLocalStorage();
