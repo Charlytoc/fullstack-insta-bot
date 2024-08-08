@@ -149,30 +149,30 @@ async def receive_webhook(request: Request):
                     )
                 send_response(recipient_id, first_response, sender_id)
                 # Obtener la conversación con el usuario
-                conversation = get_conversation_with_user(recipient_id, sender_id)
-                if conversation.get("data"):
-                    conversation_id = conversation["data"][0]["id"]
+                # conversation = get_conversation_with_user(recipient_id, sender_id)
+                # if conversation.get("data"):
+                #     conversation_id = conversation["data"][0]["id"]
                     # Obtener los mensajes anteriores de la conversación
-                    previous_messages_data = get_messages_in_conversation(
-                        conversation_id
-                    )
+                    # previous_messages_data = get_messages_in_conversation(
+                    #     conversation_id
+                    # )
                     # print(previous_messages_data, "PREV MESSAGE DATA WITH TIMESTAMPS")
-                    previous_messages = []
+                    # previous_messages = []
                     # Limitar a los primeros 4 mensajes
-                    for msg in previous_messages_data.get("messages", {}).get(
-                        "data", []
-                    )[:5]:
-                        message_data = get_message_info(msg["id"])
-                        parsed_message = ig_message_parser(
-                            message_data, visitor_id=sender_id
-                        )
-                        previous_messages.append(parsed_message)
+                    # for msg in previous_messages_data.get("messages", {}).get(
+                    #     "data", []
+                    # )[:5]:
+                    #     message_data = get_message_info(msg["id"])
+                    #     parsed_message = ig_message_parser(
+                    #         message_data, visitor_id=sender_id
+                    #     )
+                    #     previous_messages.append(parsed_message)
 
                     # Crear la respuesta con los mensajes anteriores
-                    response_message = create_groq_completion(
-                        get_system_prompt(context=str(previous_messages)), message
-                    )
-                    send_response(recipient_id, response_message, sender_id)
+                    # response_message = create_groq_completion(
+                    #     get_system_prompt(context=str(previous_messages)), message
+                    # )
+                    # send_response(recipient_id, response_message, sender_id)
 
     return {"status": "success"}
 
