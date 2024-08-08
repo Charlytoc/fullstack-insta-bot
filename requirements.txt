@@ -1,8 +1,8 @@
-bcrypt
 fastapi
-groq
-passlib[bcrypt]
-python-dotenv
-requests
-supabase
 uvicorn
+requests
+groq
+supabase
+passlib[bcrypt]
+bcrypt
+argon2-cffi
