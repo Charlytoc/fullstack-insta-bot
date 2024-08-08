@@ -2,7 +2,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import "./rootStyles.css";
 import { useTranslation } from 'react-i18next';
 
-const REDIRECT_URI = "https://vv3l4t76-8001.use2.devtunnels.ms/authorize/"
+const REDIRECT_URI = "https://fullstack-insta-bot.onrender.com//authorize/"
 export default function Root() {
   const { t } = useTranslation();
 
