@@ -134,7 +134,7 @@ async def verify_webhook(
 @app.post("/webhooks")
 async def receive_webhook(request: Request):
     payload = await request.json()
-
+    print(payload, "Received payload")
     for entry in payload.get("entry", []):
         for messaging_event in entry.get("messaging", []):
             message = messaging_event.get("message", {}).get("text", "")
