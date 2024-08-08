@@ -4,7 +4,7 @@ export const Navbar = () => {
     return (
         <nav>
             <section className="lobster-regular">
-                ManageMe<strong>AI</strong>
+                ChatCare<strong>AI</strong>
             </section>
             <section>
                 
