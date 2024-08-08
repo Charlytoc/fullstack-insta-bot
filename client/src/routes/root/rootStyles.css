@@ -1,0 +1,64 @@
+/* Add this to the top of your CSS file to import the font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+header {
+  margin-top: 4rem;
+  background: radial-gradient(
+    circle at 30% 107%,
+    var(--header-gradient-start) 0%,
+    var(--header-gradient-middle) 30%,
+    var(--header-gradient-end) 60%,
+    var(--header-gradient-end2) 90%,
+    var(--header-gradient-end3) 100%
+  );
+  color: var(--footer-text-color);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--section-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--section-title-color);
+}
+
+footer {
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+}

@@ -1,5 +1,8 @@
+bcrypt
 fastapi
-uvicorn
-requests
 groq
+passlib[bcrypt]
 python-dotenv
+requests
+supabase
+uvicorn

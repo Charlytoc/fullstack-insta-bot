@@ -8,6 +8,10 @@ fastapi = "*"
 uvicorn = "*"
 requests = "*"
 groq = "*"
+supabase = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
+bcrypt = "*"
+argon2-cffi = "*"
 
 [dev-packages]
 

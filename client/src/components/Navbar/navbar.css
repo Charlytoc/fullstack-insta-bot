@@ -1,0 +1,43 @@
+/* navbar.css */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--section-bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  nav section:first-of-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  nav section:first-of-type strong {
+    background: var(--fancy-radial-gradient);
+    color: white;
+    padding: 10px;
+    margin-inline: 5px;
+    border-radius: 50vh;
+  }
+
+  nav section:last-of-type {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  nav a:hover {
+    color: var(--section-title-color);
+  }
+  

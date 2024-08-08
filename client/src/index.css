@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +18,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --header-gradient-start: #f09433;
+  --header-gradient-middle: #e6683c;
+  --header-gradient-end: #dc2743;
+  --header-gradient-end2: #cc2366;
+  --header-gradient-end3: #bc1888;
+  --section-bg-color: white;
+  --section-title-color: #2575fc;
+  --footer-bg-color: #333;
+  --footer-text-color: white;
+
+  --fancy-radial-gradient: radial-gradient(
+    circle at 30% 107%,
+    var(--header-gradient-start) 0%,
+    var(--header-gradient-middle) 30%,
+    var(--header-gradient-end) 60%,
+    var(--header-gradient-end2) 90%,
+    var(--header-gradient-end3) 100%
+  );
 }
 
 a {
@@ -24,11 +51,8 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
@@ -67,3 +91,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
