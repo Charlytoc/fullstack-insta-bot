@@ -183,7 +183,7 @@ def send_response(user_id: str, message: str, recipient_id: str):
     print("------------------")
     url = f"https://graph.instagram.com/{user_id}/messages"
     data = {
-        "message": {"text": message+"\n - MESSAGE DE CHARLYBOT"},
+        "message": {"text": message},
         "recipient": {"id": recipient_id},
         "access_token": INSTA_ACCESS_TOKEN,
     }
