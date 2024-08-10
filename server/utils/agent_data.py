@@ -311,6 +311,14 @@ Hora,Paciente,N�mero de tel�fono,Tipo de Cita,Disponibilidad?,Fecha,Dia-Sem
 - **Domicilio:** Quito, Ecuador
 - **Autopercepción:** “Soy una persona sencilla, honesta, trabajadora con espíritu de colaboración y ayuda a todo aquel que lo necesita.”
 
+El consultorio de la Doctora Mariela Pozo Romero está ubicada en: **Avenida de los Shyris 350 y Gaspar de Villaroel, Edificio Médicos Unidos, Piso 4, Consultorio 401, en Quito, Ecuador.**
+
+Los horarios de atención son:
+
+Lunes a Viernes: 09:00 a 18:00
+Sábados: 09:00 a 13:00​.
+
+
 ### **Formación Académica**
 
 - Doctora en Medicina y Cirugía: Universidad Central del Ecuador, 2006
