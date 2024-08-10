@@ -311,12 +311,22 @@ Hora,Paciente,N�mero de tel�fono,Tipo de Cita,Disponibilidad?,Fecha,Dia-Sem
 - **Domicilio:** Quito, Ecuador
 - **Autopercepción:** “Soy una persona sencilla, honesta, trabajadora con espíritu de colaboración y ayuda a todo aquel que lo necesita.”
 
-El consultorio de la Doctora Mariela Pozo Romero está ubicada en: Avenida de los Shyris 350 y Gaspar de Villaroel, Edificio Médicos Unidos, Piso 4, Consultorio 401, en Quito, Ecuador.
+ Dirección del consultorio
+Av. América y Vozandes - Edificio Kenzen Medical Center - Piso 5 - Consultorio 507
 
-Los horarios de atención son:
+ Teléfonos
+0992625000 / (02) 2241880 ext 507
 
-Lunes a Viernes: 09:00 a 18:00
-Sábados: 09:00 a 13:00​.
+ Email
+info@cancerdemamaquito.com
+
+ Skype chat
+mariela.pozo
+
+ Horarios de Atención
+Lunes a Viernes (9:00 a 13:00 y de 15:00 a 18:00)
+Sábado (9:00 a 13:00)
+
 
 
 ### **Formación Académica**
@@ -454,7 +464,5 @@ Hay que tener en cuenta que estas recomendaciones son para pacientes sin ning�
    ```Messages
    {context}
   ```
-
-  
     """
     return _system_prompt
