@@ -12,6 +12,7 @@ supabase = "*"
 passlib = {extras = ["bcrypt"], version = "*"}
 bcrypt = "*"
 argon2-cffi = "*"
+openai = "*"
 
 [dev-packages]
 

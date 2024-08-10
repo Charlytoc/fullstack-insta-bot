@@ -22,9 +22,10 @@ from pydantic import BaseModel
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
 from server.utils.agent_data import get_system_prompt
+from server.utils.openai_actions import create_completion_openai
+
 # Cargar las variables de entorno desde el archivo .env
 load_dotenv()
-
 
 
 INSTA_ACCESS_TOKEN = os.getenv("INSTA_ACCESS_TOKEN")
@@ -130,10 +131,8 @@ async def receive_webhook(request: Request):
             sender_id = messaging_event.get("sender", {}).get("id", "")
             recipient_id = messaging_event.get("recipient", {}).get("id", "")
 
-            print("message From user: ", message)
-            print(sender_id, "SENDEr")
             if message and sender_id:
-                first_response = create_groq_completion(
+                first_response = create_completion_openai(
                     get_system_prompt(context=str("")), message
                 )
                 send_response(recipient_id, first_response, sender_id)
@@ -167,20 +166,13 @@ async def receive_webhook(request: Request):
 
 
 def send_response(user_id: str, message: str, recipient_id: str):
-    print("------------------")
-    print("Trying to send response to user")
-    print("Bot Message: ", message)
-    print("------------------")
     url = f"https://graph.instagram.com/{user_id}/messages"
     data = {
         "message": {"text": message},
         "recipient": {"id": recipient_id},
         "access_token": INSTA_ACCESS_TOKEN,
     }
-    response = requests.post(
-        url, json=data
-    )  # Cambiado a json para enviar correctamente el payload
-    print(response.json())
+    requests.post(url, json=data)
 
 
 # Nuevo endpoint para la política de privacidad
