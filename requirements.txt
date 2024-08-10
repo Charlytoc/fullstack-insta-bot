@@ -3,8 +3,6 @@ uvicorn
 requests
 groq
 supabase
-passlib[bcrypt]
-bcrypt
 argon2-cffi
 python-dotenv
 openai
