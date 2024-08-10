@@ -124,12 +124,22 @@ async def receive_webhook(request: Request):
     payload = await request.json()
     print(payload, "Received payload")
     for entry in payload.get("entry", []):
-        for messaging_event in entry.get("messaging", []):
+        for messaging_event in entry.get("messaging", [])[::-1]:  # Reverse the messages
             message = messaging_event.get("message", {}).get("text", "")
             sender_id = messaging_event.get("sender", {}).get("id", "")
             recipient_id = messaging_event.get("recipient", {}).get("id", "")
 
             if message and sender_id:
+                # Check if recipient_id exists in user_profiles.insta_account_id
+                user_profile = (
+                    supabase.table("user_profiles")
+                    .select("*")
+                    .eq("insta_account_id", recipient_id)
+                    .execute()
+                )
+                if not user_profile.data:
+                    return {"status": "recipient_id not found"}
+
                 # Check if conversation exists
                 conversation = (
                     supabase.table("conversations")
@@ -164,7 +174,7 @@ async def receive_webhook(request: Request):
                     .limit(10)
                     .execute()
                 )
-                print("messages from SUPABASE: ", messages)
+
                 context = "\n".join(
                     [f"{msg['type']}: {msg['text']}" for msg in messages.data]
                 )
